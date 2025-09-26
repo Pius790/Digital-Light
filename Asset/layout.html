@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalLightCenter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Digital Light Center</h1>
+    </header>
+
+    <button class="hamburger" id="hamburger">&#9776;</button>
+<nav class="navbar" id="navbar">
+    <a href="#">Home</a>
+    <a href="Features.html">Feature</a>
+    <a href="About.html">About</a>
+    <a href="Contact.html">Contact</a>
+     <a href="register.html">Register</a>
+</nav>
+    
+    <main class="grid-layout">
+        <section class="grid-item">
+            <h2>Technologies</h2>
+            <div class="card-container">
+                <div>World Changing Technology</div><br>
+                  <div>Staying Above The Competition</div>
+            </div>
+        </section>
+
+         <section class="grid-item">
+            <h2>Education</h2>
+            <div class="card-container">
+                <div>Raising Tech Giants</div><br>
+                  <div>Building the future(One Code Line at a time)</div>
+            </div>
+        </section>
+
+        <section class="grid-item">
+            <h2>E-Commerce</h2>
+            <div class="card-container">
+                <div>Transparent transactions at all times</div><br>
+                  <div>Providing The best at Affordable Prices</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>copy; 2025 My website</p>
+        <button class="cta-button"> <a href="start.html" id="tech">Get Started</a></button>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('open');
+    });
+    </script>
+</body>
+</html>
