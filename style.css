@@ -114,37 +114,7 @@ footer{
 
 
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        .grid-layout {
- grid-template-columns: 1fr 1fr;
-}
-    }
-    @media (max-width: 768px) {
- .grid-layout {
- grid-template-columns: 1fr;
- } 
-}
 
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.4s ease-in-out;
-    }
-
-    .navbar.open {
-        max-height: 300px; 
-    }
-
-    .navbar a {
-        border-top: 1px solid #444;
-        padding: 15px;
-        text-align: left;
-    }
-}
 .tech{
     background-color: rgb(73, 64, 202);
     padding: 10px;
@@ -232,4 +202,54 @@ footer{
  
 }
 
+@media (max-width: 992px) {
+  .feature-lay {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
 
+  #tech {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .feature-lay {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  #tech {
+    font-size: 1rem;
+  }
+
+  header.feature {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  header.feature {
+    font-size: 1.2rem;
+  }
+
+  #tech {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
