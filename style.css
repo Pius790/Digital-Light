@@ -202,8 +202,11 @@ footer{
  
 }
 
+/* Mobile (≤768px → 1 column + hamburger menu) */
 @media (max-width: 992px) {
-  .feature-lay {
+  .feature-lay,
+  #feature-lay,
+  .grid-layout {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 20px;
@@ -214,9 +217,11 @@ footer{
   }
 }
 
-/* Mobile */
+/* Tablets & small laptops (≤768px) → 1 column + hamburger menu */
 @media (max-width: 768px) {
-  .feature-lay {
+  .feature-lay,
+  #feature-lay,
+  .grid-layout {
     grid-template-columns: 1fr;
     gap: 15px;
     padding: 15px;
@@ -226,9 +231,15 @@ footer{
     font-size: 1rem;
   }
 
+  header h1,
   header.feature {
     font-size: 1.5rem;
     text-align: center;
+  }
+
+  p, ul, ol {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .cta-button {
@@ -236,16 +247,55 @@ footer{
     display: block;
     margin: 10px auto;
   }
+
+  /* Navbar collapses */
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar.open {
+    display: flex;
+  }
+  .navbar a {
+    border-top: 1px solid #444;
+    padding: 12px;
+    font-size: 1rem;
+  }
 }
 
-/* Small phones */
+/* Small phones (≤480px) */
 @media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
   header.feature {
     font-size: 1.2rem;
   }
 
   #tech {
     font-size: 0.9rem;
+  }
+
+  .grid-item {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
+
+  p, ul, ol {
+    font-size: 0.85rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
   }
 
   footer p {
